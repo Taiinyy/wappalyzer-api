@@ -37,14 +37,14 @@ function modifyURLs(urls) {
 
 
 app.get('/', (req, res) => {
-  res.send('Wappalyzer API is ready! 🚀')
+  res.send('API is ready! 🚀')
 })
 
 app.get('/extract', async (req, res, next) => {
   const url = req.query.url
 
   if (url == undefined || url == '') {
-    return res.status(400).send('missing url query parameter')
+    return res.status(400).send('URL param is needed')
   }
 
   const options = {
