@@ -49,7 +49,7 @@ app.get('/extract', async (req, res, next) => {
 
   const options = {
     debug: false,
-    maxDepth: 1,
+    maxDepth: 10,
     recursive: false,
     maxWait: 20000,
     userAgent: 'Wappalyzer',
